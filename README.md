@@ -16,8 +16,7 @@ You must have the following installed on your local development environment:
 - SBT (Simple Build Tool) v0.13.8
   See: http://www.scala-sbt.org/0.13/tutorial/Setup.html
 
-===============================
-QUICKSTART
+## QUICKSTART
 
 At the command line, execute
 
