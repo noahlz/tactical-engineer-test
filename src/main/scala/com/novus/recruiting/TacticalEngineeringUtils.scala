@@ -43,14 +43,14 @@ object TacticalEngineeringUtils {
    * 4 -> Some(200.0)
    * 5 -> Some(300.0)
    *
-   * where [[isBusinessDay]] returns [[false]] for each day, would return a result of [[Some(200.0)]]
+   * where [[isBusinessDay]] returns [[true]] for each day, would return a result of [[Some(200.0)]]
    * for a [[range]] of 3 ([[(100 + 300 + 200) / 3)]]).
    *
    * If [[isBusinessDay(4)]] returned [[false]], the average daily volume would be
    * [[Some(233.3333)]] for a range of 3 ([[(100 + 300 + 300) / 3)]]).
    *
    * @param data map of daily volume for a given security, where the key is the day and value is the trading volume on that day.
-   * @param isBusinessDay a supplied lookup function that indicates if a given day was a business day, and should be excluded from the average calculation.
+   * @param isBusinessDay a supplied lookup function that indicates if a given day was a business day, and should be included to the average calculation.
    * @param range the number of business days to take from the data set for the calculation (excluding no-data days and non-business days).
    * @return Some value representing the average daily volume (could be 0.00), or None if no volume was found given the parameters.
    */
